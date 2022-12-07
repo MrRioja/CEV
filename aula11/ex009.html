@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Etnia</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Validação de Origem</h1>
-    Digite o seu país de origem: <input type="text" name="txtpais" id="txtpais">
-    <input type="button" value="Verificar" onclick="verificar()">
+    Digite o seu país de origem:
+    <input type="text" name="txtpais" id="txtpais" />
+    <input type="button" value="Verificar" onclick="verificar()" />
     <div id="res"></div>
     <script>
-        function verificar() {
-            var pais = window.document.querySelector('input#txtpais')
-            var res = window.document.querySelector('div#res')
-            var pais = pais.value
-            if (pais != 'Brasil') {
-                res.innerHTML = '<strong>Você é estrangeiro!</strong>'
-                //window.document.write('Você é brasileiro!')
-            } else {
-                res.innerHTML = '<strong>Você é brasileiro!</strong>'
-                //window.document.write('Você é estrangeiro!')
-            }
+      function verificar() {
+        var pais = window.document.querySelector("input#txtpais");
+        var res = window.document.querySelector("div#res");
+        var pais = pais.value;
+        if (String(pais).toLowerCase() != "brasil") {
+          res.innerHTML = "<strong>Você é estrangeiro!</strong>";
+          //window.document.write('Você é brasileiro!')
+        } else {
+          res.innerHTML = "<strong>Você é brasileiro!</strong>";
+          //window.document.write('Você é estrangeiro!')
         }
+      }
     </script>
-</body>
+  </body>
 </html>

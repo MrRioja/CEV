@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var nome = Number(window.prompt('Digite seu salario: '))
-        document.writeln(`Seu salario é ${nome.toFixed(2)} </br>`)
-        document.writeln(`Seu salario é ${nome.toFixed(2).replace('.',',')} </br>`)
-        document.write(`Seu salario em reais é ${nome.toLocaleString('pt-BR',
-            { style: 'currency', currency: 'USD' })}`)
-
+      var nome = Number(window.prompt("Digite seu salario: "));
+      document.writeln(`Seu salario é ${nome.toFixed(2)} </br>`);
+      document.writeln(
+        `Seu salario é ${nome.toFixed(2).replace(".", ",")} </br>`
+      );
+      document.write(
+        `Seu salario em reais é ${nome.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}`
+      );
     </script>
-</body>
-
+  </body>
 </html>
